@@ -1,4 +1,4 @@
-import { Product } from "./product";
+import { Product } from "../../shop/models/product";
 
 export class Pagination {
   pageIndex:number;

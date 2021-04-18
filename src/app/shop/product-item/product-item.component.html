@@ -1,14 +1,18 @@
 <div class="card h-100 shadow-sm">
-  <img src="{{product.pictureUrl}}" alt="{{product.name}}" srcset="" class="img-fluid" style="height: 200px;" >
+  <img src="{{product.pictureUrl}}" alt="{{product.name}}" srcset="" class="img-fluid" style="height: 200px;">
+  <div class="d-flex align-items-center justify-content-center hover-overlay">
+
+  </div>
   <div class="card-body d-flex flex-column">
-    <a href="#">
+    <a routerLink='/shop/{{product.id}}'>
       <h6 class="text-uppercase">{{product.name}}</h6>
     </a>
     <span class="mb-2">{{product.price | currency}}</span>
 
     <div class="btn-group mt-auto">
-      <button type="button" class="btn btn-sm btn-outline-secondary fa fa-shopping-cart mr-1 p-1"> View</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary fa fa-edit"> Edit</button>
+      <button type="button" routerLink='/shop/{{product.id}}'
+      class="btn btn-sm btn-outline-primary fa fa-display mr-1 p-1"> View</button>
+    <button type="button" class="btn btn-sm btn-outline-primary fa  fa-shopping-cart" (click)="addItemToBasket()"> Sepete Ekle</button>
     </div>
   </div>
 </div>
